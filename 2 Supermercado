@@ -1,0 +1,16 @@
+import random
+print("Bienvenido al sistema de descuentos del supermercado")
+nombre_cliente = input("Por favor, ingrese su nombre: ")
+total_compra = float(input("Ingrese el total de su compra: "))
+numero_aleatorio = random.randint(10, 99)  # Generar un número aleatorio entre 10 y 99
+if numero_aleatorio < 74:
+    descuento = total_compra * 0.15
+else:
+    descuento = total_compra * 0.20
+total_pagar = total_compra - descuento
+print("\n*** Detalles de la compra ***")
+print(f"Nombre del cliente: {nombre_cliente}")
+print(f"Número aleatorio generado: {numero_aleatorio}")
+print(f"Descuento aplicado: ${descuento:.2f}")
+print(f"Total a pagar: ${total_pagar:.2f}")
+print("Gracias por su compra. ¡Vuelva pronto!")

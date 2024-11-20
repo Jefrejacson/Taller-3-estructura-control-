@@ -1,0 +1,17 @@
+def calcular_pulsaciones(edad, sexo):
+    if sexo.lower() == "femenino":
+        pulsaciones = (220 - edad) / 10
+    elif sexo.lower() == "masculino":
+        pulsaciones = (210 - edad) / 10
+    else:
+        raise ValueError("El sexo debe ser 'femenino' o 'masculino'.")
+    return pulsaciones
+try:
+    edad = int(input("Introduce tu edad: "))
+    sexo = input("Introduce tu sexo (femenino/masculino): ")
+    if edad < 0:
+        raise ValueError("La edad debe ser un número positivo.")
+    pulsaciones = calcular_pulsaciones(edad, sexo)
+    print(f"El número de pulsaciones por cada 10 segundos de ejercicio es: {pulsaciones:.2f}")
+except ValueError as e:
+    print(f"Error: {e}")

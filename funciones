@@ -1,0 +1,22 @@
+def calcular_salario_basico(horas_trabajadas, valor_hora):
+  salario_basico = horas_trabajadas * valor_hora
+  return salario_basico
+def calcular_descuento_iva(salario_basico):
+  descuento_iva = salario_basico * 0.19
+  return descuento_iva
+def calcular_bonificacion(salario_basico):
+  bonificacion = salario_basico * 0.05
+  return bonificacion
+def calcular_salario_neto(salario_basico, descuento_iva, bonificacion):
+  salario_neto = salario_basico - descuento_iva + bonificacion
+  return salario_neto
+horas_trabajadas = float(input("Ingrese el número de horas trabajadas: "))
+valor_hora = float(input("Ingrese el valor de la hora: "))
+salario_basico = calcular_salario_basico(horas_trabajadas, valor_hora)
+descuento_iva = calcular_descuento_iva(salario_basico)
+bonificacion = calcular_bonificacion(salario_basico)
+salario_neto = calcular_salario_neto(salario_basico, descuento_iva, bonificacion)
+print("Salario básico:", salario_basico)
+print("Descuento de IVA:", descuento_iva)
+print("Bonificación:", bonificacion)
+print("Salario neto:", salario_neto)

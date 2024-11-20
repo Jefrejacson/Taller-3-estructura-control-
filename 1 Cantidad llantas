@@ -1,0 +1,9 @@
+def calcular_total_llantas(cantidad_llantas, nombre_cliente):
+  if cantidad_llantas < 5:
+    costo_total = cantidad_llantas * 80000
+  else:
+    costo_total = cantidad_llantas * 70000
+  print(f"El costo total para {nombre_cliente} es: ${costo_total}")
+# Ejemplo de uso
+calcular_total_llantas(4, "Juan Pérez")
+calcular_total_llantas(6, "María Rodríguez")

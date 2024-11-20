@@ -1,0 +1,9 @@
+def calcular_cuota(monto_fianza):
+  if monto_fianza < 500000:
+    cuota_a_pagar = monto_fianza * 0.03
+  else:
+    cuota_a_pagar = monto_fianza * 0.02
+  return cuota_a_pagar
+monto_fianza = float(input("Ingrese el monto de la fianza: "))
+cuota = calcular_cuota(monto_fianza)
+print("La cuota a pagar es:", cuota)

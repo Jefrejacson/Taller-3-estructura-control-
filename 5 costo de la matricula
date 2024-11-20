@@ -1,0 +1,24 @@
+# Definir el costo por materia
+COSTO_POR_MATERIA = 100  # Suponiendo que el costo por cada materia es 100 unidades
+
+def calcular_costo_matricula():
+    # Solicitar al usuario el número de materias
+    try:
+        numero_de_materias = int(input("Ingrese el número de materias que cursa el alumno: "))
+        
+        # Validar que el número de materias sea un valor no negativo
+        if numero_de_materias < 0:
+            print("El número de materias no puede ser negativo. Intente de nuevo.")
+            return
+        
+        # Calcular el costo total de matrícula
+        costo_total = numero_de_materias * COSTO_POR_MATERIA
+        
+        # Mostrar el resultado
+        print(f"El costo total de matrícula es: {costo_total}")
+    
+    except ValueError:
+        print("Por favor ingrese un número válido de materias.")
+
+# Llamar a la función para calcular el costo
+calcular_costo_matricula()
